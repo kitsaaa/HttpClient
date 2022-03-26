@@ -12,7 +12,7 @@ import { catchError } from 'rxjs/operators';
 
 export class EmployeeService {
   
-  private url: string = '/assets/employee1.json'
+  private url: string = '/assets/employee.json'
 
   constructor(private http: HttpClient) { }
 
