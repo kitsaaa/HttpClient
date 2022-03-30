@@ -1,3 +1,21 @@
-<p>Enter your name</p> <input type="text" [(ngModel)]="fname">
-<button (click)="submit()">Submit</button>
-<p>{{fname}}</p>
+<form #signinForm="ngForm" (ngSubmit)="submit(signinForm)">
+    <p>Enter your email: <input type="email" name="email" ngModel></p>
+    <p>Enter your name: <input type="text" name="name" ngModel></p>
+    <p>Enter your password: <input type="text" required="minlength=6" #password="ngModel" name="password" ngModel></p>
+    <div ngModelGroup="address">
+        <div>
+            <label>Street</label>
+            <input type="text" name="street" ngModel>
+        </div>
+        <div>
+            <label>City</label>
+            <input type="text" name="city" ngModel>
+        </div>
+    </div>
+    Check me<input type="checkbox" name="checkbox">
+    <br>
+    <button>Submit</button>
+    <p>{{fname}}</p>
+</form>
+<div *ngIf="password.touched && password.invalid">ERR</div>
+{{signinForm.value | json}}

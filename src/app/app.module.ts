@@ -8,6 +8,8 @@ import { XyzComponent } from './xyz/xyz.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
 import { Form2Component } from './form2/form2.component';
+import { Form3Component } from './form3/form3.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,13 +17,15 @@ import { Form2Component } from './form2/form2.component';
     EmployeeComponent,
     XyzComponent,
     FormComponent,
-    Form2Component
+    Form2Component,
+    Form3Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

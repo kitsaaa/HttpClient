@@ -1,0 +1,12 @@
+<form>
+    <div>
+        Name: <input type="text" [formControl]="userName" />
+    </div>
+    <div>
+        Email: <input type="text" [formControl]="userEmail" />
+    </div>
+    <div>
+        Comment: <input type="text" [formControl]="userComment"  />
+    </div>
+    <button (click)="sendData()"> Submit </button>
+</form>
